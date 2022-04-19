@@ -1018,7 +1018,7 @@ func buildManagedKafkaCR(kafkaRequest *dbapi.KafkaRequest, kafkaConfig *config.K
 	labels := map[string]string{
 		"bf2.org/kafkaInstanceProfileQuotaConsumed": strconv.Itoa(k.QuotaConsumed),
 	}
-	if strings.Contains(api.AllInstanceTypeSupport.String(), kafkaRequest.InstanceType) {
+	if kafkaRequest.InstanceType != types.EVAL.String() {
 		labels["bf2.org/kafkaInstanceProfileType"] = kafkaRequest.InstanceType
 	}
 	managedKafkaCR := &managedkafka.ManagedKafka{
