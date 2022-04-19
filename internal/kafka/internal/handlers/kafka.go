@@ -80,10 +80,7 @@ func (h kafkaHandler) Create(w http.ResponseWriter, r *http.Request) {
 				convKafka.InstanceType = instanceType.String()
 				return nil
 			},
-<<<<<<< HEAD
-=======
 			ValidateAZOption(convKafka),
->>>>>>> m909
 		},
 		Action: func() (interface{}, *errors.ServiceError) {
 			svcErr := h.service.RegisterKafkaJob(convKafka)
