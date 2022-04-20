@@ -21,8 +21,8 @@ import (
 )
 
 type Capacity struct {
-	IngressThroughputPerSec     string `json:"ingressThroughputPerSec"`
-	EgressThroughputPerSec      string `json:"egressThroughputPerSec"`
+	IngressThroughputPerSec     string `json:"ingressPerSec"`
+	EgressThroughputPerSec      string `json:"egressPerSec"`
 	TotalMaxConnections         int    `json:"totalMaxConnections"`
 	MaxDataRetentionSize        string `json:"maxDataRetentionSize"`
 	MaxPartitions               int    `json:"maxPartitions"`
